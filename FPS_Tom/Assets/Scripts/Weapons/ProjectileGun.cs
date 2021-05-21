@@ -1,20 +1,9 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
-/// Thanks for downloading my projectile gun script! :D
-/// Feel free to use it in any project you like!
-/// 
-/// The code is fully commented but if you still have any questions
-/// don't hesitate to write a yt comment
-/// or use the #coding-problems channel of my discord server
-/// 
-/// Dave
 public class ProjectileGun : MonoBehaviour
 {
-    
-
     //bullet 
     public GameObject bullet;
 

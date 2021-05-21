@@ -239,6 +239,74 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""PauseAction"",
+            ""id"": ""d856a3f7-f50d-4a7e-bb53-592f2b99af29"",
+            ""actions"": [
+                {
+                    ""name"": ""PauseGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""d336e199-6d32-466d-8b27-cfe2318a725d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""EndGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae5e3224-885c-4399-a287-75433ce065a0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""02aad892-f1ca-4ace-b569-6f4bc56a0fad"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PauseGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d5f5e7f7-552f-48a1-bdc8-fa566dd9ab99"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PauseGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8943024c-2522-4c99-be09-7434110c95c0"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EndGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e10c6276-0341-4c1a-ba24-9a8ebe0340db"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EndGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -253,6 +321,10 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         m_Character_Sprint = m_Character.FindAction("Sprint", throwIfNotFound: true);
         m_Character_SprintReleased = m_Character.FindAction("SprintReleased", throwIfNotFound: true);
         m_Character_Shoot = m_Character.FindAction("Shoot", throwIfNotFound: true);
+        // PauseAction
+        m_PauseAction = asset.FindActionMap("PauseAction", throwIfNotFound: true);
+        m_PauseAction_PauseGame = m_PauseAction.FindAction("PauseGame", throwIfNotFound: true);
+        m_PauseAction_EndGame = m_PauseAction.FindAction("EndGame", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -387,6 +459,47 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         }
     }
     public CharacterActions @Character => new CharacterActions(this);
+
+    // PauseAction
+    private readonly InputActionMap m_PauseAction;
+    private IPauseActionActions m_PauseActionActionsCallbackInterface;
+    private readonly InputAction m_PauseAction_PauseGame;
+    private readonly InputAction m_PauseAction_EndGame;
+    public struct PauseActionActions
+    {
+        private @DefaultInput m_Wrapper;
+        public PauseActionActions(@DefaultInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PauseGame => m_Wrapper.m_PauseAction_PauseGame;
+        public InputAction @EndGame => m_Wrapper.m_PauseAction_EndGame;
+        public InputActionMap Get() { return m_Wrapper.m_PauseAction; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PauseActionActions set) { return set.Get(); }
+        public void SetCallbacks(IPauseActionActions instance)
+        {
+            if (m_Wrapper.m_PauseActionActionsCallbackInterface != null)
+            {
+                @PauseGame.started -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnPauseGame;
+                @PauseGame.performed -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnPauseGame;
+                @PauseGame.canceled -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnPauseGame;
+                @EndGame.started -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnEndGame;
+                @EndGame.performed -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnEndGame;
+                @EndGame.canceled -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnEndGame;
+            }
+            m_Wrapper.m_PauseActionActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @PauseGame.started += instance.OnPauseGame;
+                @PauseGame.performed += instance.OnPauseGame;
+                @PauseGame.canceled += instance.OnPauseGame;
+                @EndGame.started += instance.OnEndGame;
+                @EndGame.performed += instance.OnEndGame;
+                @EndGame.canceled += instance.OnEndGame;
+            }
+        }
+    }
+    public PauseActionActions @PauseAction => new PauseActionActions(this);
     public interface ICharacterActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -397,5 +510,10 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnSprintReleased(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+    }
+    public interface IPauseActionActions
+    {
+        void OnPauseGame(InputAction.CallbackContext context);
+        void OnEndGame(InputAction.CallbackContext context);
     }
 }

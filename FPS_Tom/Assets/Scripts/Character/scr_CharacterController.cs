@@ -105,6 +105,7 @@ public class scr_CharacterController : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenu.paused) return;
         CalculateView();
         CalculateMovement();
         CalculateJump();

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637537461564928274
-    m_Hash: 3202749048
+      ticks: 637572261411918593
+    m_Hash: 3362384963
   m_LockFileStatus:
     m_FilePath: T:/UniProjects/GameEngine1/Assesmentv2/Final_Project/FPS_Tom/FPS_Tom/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637572086918382424
-    m_Hash: 4072845469
+      ticks: 637572261423085774
+    m_Hash: 1681636673
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -822,12 +822,12 @@ m_PackageAssets:
         url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
         revision: 56c667cbc326a1cbab8dfd7ebc693a1121d0abe1
         path: 
-    - packageId: com.unity.textmeshpro@3.0.4
+    - packageId: com.unity.textmeshpro@3.0.6
       testable: 0
       isDirectDependency: 1
-      version: 3.0.4
+      version: 3.0.6
       source: 1
-      resolvedPath: T:\UniProjects\GameEngine1\Assesmentv2\Final_Project\FPS_Tom\FPS_Tom\Library\PackageCache\com.unity.textmeshpro@3.0.4
+      resolvedPath: T:\UniProjects\GameEngine1\Assesmentv2\Final_Project\FPS_Tom\FPS_Tom\Library\PackageCache\com.unity.textmeshpro@3.0.6
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -973,13 +973,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637492944820000000
+      datePublishedTicks: 637547111200000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
-        revision: e2f8dffb26de9a130d5b2140d83891d9a7825330
+        revision: 01e57e3b7de18af9dfe9baaa0a0ff5cc4765c899
         path: 
     - packageId: com.unity.timeline@1.4.6
       testable: 0

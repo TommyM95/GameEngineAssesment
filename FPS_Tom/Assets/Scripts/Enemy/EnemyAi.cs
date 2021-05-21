@@ -63,6 +63,7 @@ public class EnemyAi : MonoBehaviour
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
     }
+
     private void SearchWalkPoint()
     {
         //Calculate random point in range

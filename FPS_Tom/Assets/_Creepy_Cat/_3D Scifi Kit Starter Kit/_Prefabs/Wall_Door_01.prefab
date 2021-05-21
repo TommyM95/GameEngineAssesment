@@ -97,6 +97,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4310873521538406}
+  - component: {fileID: 3646082492075786850}
   m_Layer: 0
   m_Name: Wall_Door_01
   m_TagString: Untagged
@@ -123,6 +124,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &3646082492075786850
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340914439948258}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.24, y: 3, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 6.24, y: 3, z: 1}
+  m_TimeToStationary: 0.5
 --- !u!1 &1444722589895210
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +239,7 @@ GameObject:
   - component: {fileID: 4622560643971760}
   - component: {fileID: 33041847502526716}
   - component: {fileID: 23411662088071838}
+  - component: {fileID: 5541754380505290964}
   m_Layer: 0
   m_Name: Wall_Door_01
   m_TagString: Untagged
@@ -292,3 +310,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &5541754380505290964
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726701773508028}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.24, y: 1, z: 3.0000002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.4, y: -1, z: 3.0000002}
+  m_TimeToStationary: 0.5

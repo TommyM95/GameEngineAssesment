@@ -48,17 +48,20 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuPanel.SetActive(true);
         Time.timeScale = 0;
-        //AudioListener.pause = true;
+        AudioListener.pause = true;
         paused = true;
-        
+        Cursor.lockState = CursorLockMode.None;
+
+
     }
 
     public void ResumeGame()
     {
         pauseMenuPanel.SetActive(false);
         Time.timeScale = 1;
-        //AudioListener.pause = false;
+        AudioListener.pause = false;
         paused = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void EndGame()

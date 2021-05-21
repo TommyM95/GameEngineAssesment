@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,13 @@ public class scr_Health : MonoBehaviour
     public float defaultHealth;
     public TMP_Text hpText;
     private string _Name;
+
+    public event Action<float> OnHealthPctChanged = delegate { };
+
+    public void OnEnable()
+    {
+        health = defaultHealth;
+    }
 
     private int lastFrame;
     public int FramesCountSinceDamageTaken 
@@ -54,6 +62,8 @@ public class scr_Health : MonoBehaviour
         if (FramesCountSinceDamageTaken > 2)
         {
             health -= damageAmount;
+            float currentHealthPct = health / defaultHealth;
+            OnHealthPctChanged(currentHealthPct);
         }
         
         lastFrame = Time.frameCount;

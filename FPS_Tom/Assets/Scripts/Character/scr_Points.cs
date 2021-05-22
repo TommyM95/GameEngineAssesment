@@ -27,6 +27,11 @@ public class scr_Points : MonoBehaviour
     private void OnEnemyDeath() 
     {
         points += pointsPerEnemy;
+        UpdatePointsUI();
+    }
+
+    public void UpdatePointsUI()
+    {
         pointsText.text = "Points : " + points;
     }
 }

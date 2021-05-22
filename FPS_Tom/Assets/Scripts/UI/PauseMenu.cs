@@ -8,8 +8,10 @@ public class PauseMenu : MonoBehaviour
     private DefaultInput defaultInput;
 
     public static bool paused = false;
+    public static bool upgrading = false;
 
     public GameObject pauseMenuPanel;
+    public GameObject upgradeMenuPanel;
 
     private void Awake()
     {
@@ -30,6 +32,7 @@ public class PauseMenu : MonoBehaviour
     {
         defaultInput.PauseAction.PauseGame.performed += _ => DeterminePause();
         defaultInput.PauseAction.EndGame.performed += _ => EndGame();
+        defaultInput.PauseAction.UpgradeMenu.performed += _ => DetermineUpgradeMenu();
     }
 
     public void DeterminePause()
@@ -51,8 +54,6 @@ public class PauseMenu : MonoBehaviour
         AudioListener.pause = true;
         paused = true;
         Cursor.lockState = CursorLockMode.None;
-
-
     }
 
     public void ResumeGame()
@@ -61,6 +62,37 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         AudioListener.pause = false;
         paused = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+
+    public void DetermineUpgradeMenu()
+    {
+        if (!upgrading)
+        {
+            OpenUpgradeMenu();
+        }
+        else
+        {
+            CloseUpgradeMenu();
+        }
+    }
+
+    public void OpenUpgradeMenu()
+    {
+        upgradeMenuPanel.SetActive(true);
+        Time.timeScale = 0;
+        AudioListener.pause = true;
+        upgrading = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void CloseUpgradeMenu()
+    {
+        upgradeMenuPanel.SetActive(false);
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+        upgrading = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 

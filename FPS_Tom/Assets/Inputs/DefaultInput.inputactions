@@ -246,6 +246,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "UpgradeMenu",
+                    "type": "Button",
+                    "id": "92728920-2de7-421c-9ac4-23b4187af32e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -290,6 +298,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "EndGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d71cfb1c-1fe5-4f95-88b5-ae59dbde9700",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpgradeMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

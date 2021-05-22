@@ -259,6 +259,14 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""UpgradeMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""92728920-2de7-421c-9ac4-23b4187af32e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -305,6 +313,17 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""action"": ""EndGame"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d71cfb1c-1fe5-4f95-88b5-ae59dbde9700"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UpgradeMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -325,6 +344,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         m_PauseAction = asset.FindActionMap("PauseAction", throwIfNotFound: true);
         m_PauseAction_PauseGame = m_PauseAction.FindAction("PauseGame", throwIfNotFound: true);
         m_PauseAction_EndGame = m_PauseAction.FindAction("EndGame", throwIfNotFound: true);
+        m_PauseAction_UpgradeMenu = m_PauseAction.FindAction("UpgradeMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -465,12 +485,14 @@ public class @DefaultInput : IInputActionCollection, IDisposable
     private IPauseActionActions m_PauseActionActionsCallbackInterface;
     private readonly InputAction m_PauseAction_PauseGame;
     private readonly InputAction m_PauseAction_EndGame;
+    private readonly InputAction m_PauseAction_UpgradeMenu;
     public struct PauseActionActions
     {
         private @DefaultInput m_Wrapper;
         public PauseActionActions(@DefaultInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @PauseGame => m_Wrapper.m_PauseAction_PauseGame;
         public InputAction @EndGame => m_Wrapper.m_PauseAction_EndGame;
+        public InputAction @UpgradeMenu => m_Wrapper.m_PauseAction_UpgradeMenu;
         public InputActionMap Get() { return m_Wrapper.m_PauseAction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -486,6 +508,9 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                 @EndGame.started -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnEndGame;
                 @EndGame.performed -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnEndGame;
                 @EndGame.canceled -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnEndGame;
+                @UpgradeMenu.started -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnUpgradeMenu;
+                @UpgradeMenu.performed -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnUpgradeMenu;
+                @UpgradeMenu.canceled -= m_Wrapper.m_PauseActionActionsCallbackInterface.OnUpgradeMenu;
             }
             m_Wrapper.m_PauseActionActionsCallbackInterface = instance;
             if (instance != null)
@@ -496,6 +521,9 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                 @EndGame.started += instance.OnEndGame;
                 @EndGame.performed += instance.OnEndGame;
                 @EndGame.canceled += instance.OnEndGame;
+                @UpgradeMenu.started += instance.OnUpgradeMenu;
+                @UpgradeMenu.performed += instance.OnUpgradeMenu;
+                @UpgradeMenu.canceled += instance.OnUpgradeMenu;
             }
         }
     }
@@ -515,5 +543,6 @@ public class @DefaultInput : IInputActionCollection, IDisposable
     {
         void OnPauseGame(InputAction.CallbackContext context);
         void OnEndGame(InputAction.CallbackContext context);
+        void OnUpgradeMenu(InputAction.CallbackContext context);
     }
 }

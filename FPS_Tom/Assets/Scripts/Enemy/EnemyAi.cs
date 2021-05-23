@@ -13,6 +13,8 @@ public class EnemyAi : MonoBehaviour
 
     public float health;
 
+    public AudioSource gunShotAudio;
+
     //Patroling
     [Header("Patroling")]
     public Vector3 walkPoint;
@@ -94,6 +96,7 @@ public class EnemyAi : MonoBehaviour
             Rigidbody rb = Instantiate(projectile, fireFromPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * attackForce, ForceMode.Impulse);
             rb.AddForce(transform.up * attackUpwardForce, ForceMode.Impulse);
+            gunShotAudio.Play();
             ///End of attack code
 
             alreadyAttacked = true;

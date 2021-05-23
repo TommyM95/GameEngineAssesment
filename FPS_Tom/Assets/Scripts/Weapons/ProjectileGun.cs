@@ -32,7 +32,8 @@ public class ProjectileGun : MonoBehaviour
     public GameObject muzzleFlash;
     public TextMeshProUGUI ammunitionDisplay;
 
-    //bug fixing :D
+    public AudioSource gunShotAudio;
+
     public bool allowInvoke = true;
 
     private void Awake()
@@ -112,7 +113,7 @@ public class ProjectileGun : MonoBehaviour
         //Instantiate muzzle flash, if you have one
         if (muzzleFlash != null)
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
-
+        gunShotAudio.Play();
         bulletsLeft--;
         bulletsShot++;
 

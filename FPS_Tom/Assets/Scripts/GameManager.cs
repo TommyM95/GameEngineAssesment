@@ -5,6 +5,11 @@ using UnityEngine;
 [SerializeField]
 public class GameManager : MonoBehaviour
 {
+    public GameObject winPanel;
+
+    public int enemysKilled;
+    public int totalEnemysInLevel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +23,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public void Win()
+    {
+        if (enemysKilled == totalEnemysInLevel)
+        {
+            winPanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
         
     }
 }

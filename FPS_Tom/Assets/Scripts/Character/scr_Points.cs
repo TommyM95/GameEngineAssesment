@@ -18,12 +18,6 @@ public class scr_Points : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnEnemyDeath() 
     {
         points += pointsPerEnemy;

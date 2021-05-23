@@ -37,7 +37,7 @@ public class Upgrades : MonoBehaviour
         if (playerObject.GetComponent<scr_Points>().points >= 25)
         {
             SpendPoints();
-            playerObject.GetComponentInChildren<ProjectileGun>().bullet.GetComponent<BulletDamage>().damage += 10f;
+            playerObject.GetComponentInChildren<ProjectileGun>().bullet.GetComponentInChildren<BulletDamage>().damage += 10f;
         }
         else
         {

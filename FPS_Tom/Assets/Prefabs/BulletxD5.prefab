@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fd2d093287ca440b3ab024685ebce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 20
 --- !u!114 &8707193388257164474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +262,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5323507454785841965}
   - component: {fileID: 1520663484661294917}
-  - component: {fileID: 2491034549978608221}
   - component: {fileID: 2481963627780841731}
   m_Layer: 0
   m_Name: BulletxD5
@@ -300,19 +299,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToLive: 5
---- !u!114 &2491034549978608221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5323507454785841961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7fd2d093287ca440b3ab024685ebce5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 15
 --- !u!54 &2481963627780841731
 Rigidbody:
   m_ObjectHideFlags: 0

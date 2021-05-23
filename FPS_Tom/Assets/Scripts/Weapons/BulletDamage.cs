@@ -5,5 +5,5 @@ using UnityEngine;
 [SerializeField]
 public class BulletDamage : MonoBehaviour
 {
-    public float damage = 1f;
+    public float damage;
 }

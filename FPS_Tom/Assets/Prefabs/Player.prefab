@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffbc9a5da40fd0d419c34602da88f65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5323507454785841961, guid: d01f1119961d5bd469b0470bafcc660b, type: 3}
+  bullet: {fileID: 5323507454785841961, guid: 0b0fb3700749cbf4a9719c6ecb28ab94, type: 3}
   shootForce: 400
   upwardForce: 0
   timeBetweenShooting: 0.1
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 7588408333105406445}
   - component: {fileID: 7588408333105406434}
   m_Layer: 6
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

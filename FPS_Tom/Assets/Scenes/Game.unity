@@ -18165,9 +18165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ffc709bb29a1b4db2993c7b832facd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winPanel: {fileID: 0}
+  winPanel: {fileID: 444369607}
   enemysKilled: 0
-  totalEnemysInLevel: 12
+  totalEnemysInLevel: 13
 --- !u!4 &1505023816
 Transform:
   m_ObjectHideFlags: 0
@@ -26990,6 +26990,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7588408333084043239, guid: 6b19351a6384ece4d916a306c9604f97, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6696
+      objectReference: {fileID: 0}
     - target: {fileID: 7588408333104083752, guid: 6b19351a6384ece4d916a306c9604f97, type: 3}
       propertyPath: bullet
       value: 

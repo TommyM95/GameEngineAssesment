@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,12 +19,13 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked; // keep confined to center of screen.
 
         //Cursor.lockState = CursorLockMode.None; // set to default default
+
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LateUpdate()
     {
-        
+        Win();
     }
 
     public void Win()
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
         {
             winPanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            
         }
         
     }

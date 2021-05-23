@@ -68,7 +68,7 @@ public class scr_Health : MonoBehaviour
         
         lastFrame = Time.frameCount;
         UpdateUi();
-        Debug.Log(_Name + " health is now: " + health);
+        //Debug.Log(_Name + " health is now: " + health);
 
     }
 
@@ -91,6 +91,7 @@ public class scr_Health : MonoBehaviour
 
         if (this != null)
         {
+            FindObjectOfType<GameManager>().enemysKilled++;
             Destroy(gameObject);
             GameEvents.current.EnemyKilled();
         }

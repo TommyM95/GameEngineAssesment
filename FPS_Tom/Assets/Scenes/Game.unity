@@ -26126,6 +26126,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5323507454785841961, guid: 0b0fb3700749cbf4a9719c6ecb28ab94, type: 3}
     - target: {fileID: 7588408333104083752, guid: 6b19351a6384ece4d916a306c9604f97, type: 3}
+      propertyPath: spread
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7588408333104083752, guid: 6b19351a6384ece4d916a306c9604f97, type: 3}
       propertyPath: ammunitionDisplay
       value: 
       objectReference: {fileID: 2134331441}

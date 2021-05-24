@@ -28264,7 +28264,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7588408333084043239, guid: 6b19351a6384ece4d916a306c9604f97, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6696
+      value: 0.7097
       objectReference: {fileID: 0}
     - target: {fileID: 7588408333104083752, guid: 6b19351a6384ece4d916a306c9604f97, type: 3}
       propertyPath: bullet

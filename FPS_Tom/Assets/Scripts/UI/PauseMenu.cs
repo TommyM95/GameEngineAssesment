@@ -13,6 +13,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuPanel;
     public GameObject upgradeMenuPanel;
 
+    public float soundVolume = 0.25f;
+    public AudioSource musicSource;
+    public AudioSource playerBulletSource;
+    public AudioSource[] EnemyBulletSource;
+
     private void Awake()
     {
         defaultInput = new DefaultInput();
@@ -33,7 +38,33 @@ public class PauseMenu : MonoBehaviour
         defaultInput.PauseAction.PauseGame.performed += _ => DeterminePause();
         defaultInput.PauseAction.EndGame.performed += _ => EndGame();
         defaultInput.PauseAction.UpgradeMenu.performed += _ => DetermineUpgradeMenu();
-        
+
+        UpdateVolume(soundVolume);
+        musicSource.volume = soundVolume;
+        playerBulletSource.volume = soundVolume;
+        foreach (var enemyAudio in EnemyBulletSource)
+        {
+            if (enemyAudio != null)
+            {
+                enemyAudio.volume = soundVolume;
+            }
+
+        }
+
+    }
+
+    private void Update()
+    {
+        musicSource.volume = soundVolume;
+        playerBulletSource.volume = soundVolume;
+        foreach (var enemyAudio in EnemyBulletSource)
+        {
+            if (enemyAudio != null)
+            {
+                enemyAudio.volume = soundVolume;
+            }
+            
+        }
     }
 
     public void DeterminePause()
@@ -100,5 +131,11 @@ public class PauseMenu : MonoBehaviour
     public void EndGame()
     {
         Application.Quit();
+    }
+
+
+    public void UpdateVolume(float volume)
+    {
+        soundVolume = volume;
     }
 }

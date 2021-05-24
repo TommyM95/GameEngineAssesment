@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 50853
+  controlID: 59460
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 50798
+  controlID: 59461
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 50777
+  controlID: 59462
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 7e9dfbff6abc0a0072bc0a0082bc0a00
+      m_ExpandedIDs: ee87fbff6a88fbff168afbff1c8afbff8c47fcff0a48fcff2c9dfcff789ffcfff49ffcffcc1cfdffd21cfdff142bfdff9499fdffa699fdffb899fdffca99fdffdc99fdffee99fdff009afdff129afdff249afdff369afdff489afdff5a9afdff6c9afdff7e9afdff909afdffa29afdffdc37feff0a5affffe478ffffc882ffffe6c0ffff9af6ffff4cfbffff62880800702109009ee10c0042150d00
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -301,17 +301,17 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 0
-  m_SceneIsLit: 0
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.1658833, y: 1.5840933, z: 20.205837}
+    m_Target: {x: 3.2140036, y: 0.60888577, z: -43.077606}
     speed: 2
-    m_Value: {x: 3.1658833, y: 1.5840933, z: 20.205837}
+    m_Value: {x: 3.2140036, y: 0.60888577, z: -43.077606}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -358,13 +358,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08502111, y: -0.7520897, z: 0.09893359, w: -0.64613146}
+    m_Target: {x: 0.00058220606, y: 0.9993261, z: -0.031798873, w: 0.018290797}
     speed: 2
-    m_Value: {x: -0.08501511, y: -0.75203663, z: 0.09892661, w: -0.64608586}
+    m_Value: {x: 0.0005822064, y: 0.9993267, z: -0.03179889, w: 0.018290808}
   m_Size:
-    m_Target: 1.4213713
+    m_Target: 10
     speed: 2
-    m_Value: 1.4213713
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -503,7 +503,7 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 3
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -542,22 +542,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/_Models/MailboxV2/MailDroneTxt
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/_Models/MailboxV2/MailDroneTxt
   m_LastFoldersGridSize: 16
   m_LastProjectPath: T:\UniProjects\GameEngine1\Assesmentv2\Final_Project\FPS_Tom\FPS_Tom
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 36770000
-    m_LastClickedID: 30518
-    m_ExpandedIDs: 00000000c2760000
+    scrollPos: {x: 0, y: 30}
+    m_SelectedIDs: 8a990000
+    m_LastClickedID: 39306
+    m_ExpandedIDs: 00000000c276000020770000b0980000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -610,8 +610,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 96bc0a00
-    m_LastClickedInstanceID: 703638
+    m_SelectedInstanceIDs: f4ed1200
+    m_LastClickedInstanceID: 1240564
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 670260
+  m_LastSelectedObjectID: 848918
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -732,22 +732,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/_Models/MailboxV2
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/_Models/MailboxV2
   m_LastFoldersGridSize: -1
   m_LastProjectPath: T:\UniProjects\GameEngine1\Assesmentv2\Final_Project\FPS_Tom\FPS_Tom
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 36770000
-    m_LastClickedID: 30518
-    m_ExpandedIDs: 00000000c2760000
+    m_SelectedIDs: b0980000
+    m_LastClickedID: 39088
+    m_ExpandedIDs: 00000000c276000020770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -800,9 +800,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c8c6feff
-    m_LastClickedInstanceID: -80184
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 7aa00000
+    m_LastClickedInstanceID: 41082
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -890,7 +890,7 @@ MonoBehaviour:
     m_CachedPref: 233
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 703638
+  m_LastInspectedObjectInstanceID: 41082
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:

@@ -923,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 53499139}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: health
-      value: 100
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: player
@@ -4610,7 +4610,7 @@ PrefabInstance:
       objectReference: {fileID: 371842771}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: health
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: player
@@ -14972,7 +14972,7 @@ PrefabInstance:
       objectReference: {fileID: 1137900005}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: health
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: player
@@ -16674,7 +16674,7 @@ PrefabInstance:
       objectReference: {fileID: 1343635962}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: health
-      value: 100
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: player
@@ -17766,7 +17766,7 @@ PrefabInstance:
       objectReference: {fileID: 1408323503}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: health
-      value: 150
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: player
@@ -18481,7 +18481,7 @@ PrefabInstance:
       objectReference: {fileID: 1487881320}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: health
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: player
@@ -18702,7 +18702,7 @@ PrefabInstance:
       objectReference: {fileID: 326418531}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: health
-      value: 100
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: player
@@ -18908,7 +18908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winPanel: {fileID: 444369607}
   enemysKilled: 0
-  totalEnemysInLevel: 13
+  totalEnemysInLevel: 14
 --- !u!4 &1505023816
 Transform:
   m_ObjectHideFlags: 0
@@ -19288,7 +19288,7 @@ PrefabInstance:
       objectReference: {fileID: 1522267562}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: health
-      value: 100
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: player
@@ -20208,7 +20208,7 @@ PrefabInstance:
       objectReference: {fileID: 1649920410}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: health
-      value: 100
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 4203467621537558344, guid: 905b2ca0b74439441be2704b5f28d3a1, type: 3}
       propertyPath: player

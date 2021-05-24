@@ -33,6 +33,7 @@ public class PauseMenu : MonoBehaviour
         defaultInput.PauseAction.PauseGame.performed += _ => DeterminePause();
         defaultInput.PauseAction.EndGame.performed += _ => EndGame();
         defaultInput.PauseAction.UpgradeMenu.performed += _ => DetermineUpgradeMenu();
+        
     }
 
     public void DeterminePause()

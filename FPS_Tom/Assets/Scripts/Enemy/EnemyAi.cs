@@ -4,6 +4,8 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
+    private MeshRenderer meshRenderer;
+    public Material patrollingMaterial;
     [Header("EnemyAI")]
     public NavMeshAgent agent;
 
@@ -39,6 +41,7 @@ public class EnemyAi : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        meshRenderer.material = patrollingMaterial;
     }
 
     private void Update()

@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked; // keep confined to center of screen.
 
         //Cursor.lockState = CursorLockMode.None; // set to default default
-
-        
     }
 
     private void LateUpdate()
@@ -33,9 +31,8 @@ public class GameManager : MonoBehaviour
         if (enemysKilled == totalEnemysInLevel)
         {
             winPanel.SetActive(true);
+            Debug.Log(enemysKilled);
             Cursor.lockState = CursorLockMode.None;
-            
         }
-        
     }
 }

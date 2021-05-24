@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 1640323904023939456}
   - component: {fileID: 6076061401479546829}
   - component: {fileID: 3002579067551295512}
-  - component: {fileID: 8707193388257164474}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Bullet
@@ -239,19 +238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
---- !u!114 &8707193388257164474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3632403156859651754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db032e42ddd259a4f9748d4b7c6f7679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeToLive: 5
 --- !u!1 &5323507454785841961
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,11 +248,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5323507454785841965}
   - component: {fileID: 1520663484661294917}
-  - component: {fileID: 2491034549978608221}
   - component: {fileID: 2481963627780841731}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,19 +285,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToLive: 5
---- !u!114 &2491034549978608221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5323507454785841961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7fd2d093287ca440b3ab024685ebce5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 2
 --- !u!54 &2481963627780841731
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -4,8 +4,12 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
-    private MeshRenderer meshRenderer;
+    public MeshRenderer meshRenderer;
+
     public Material patrollingMaterial;
+    public Material chaseMaterial;
+    public Material attackMaterial;
+
     [Header("EnemyAI")]
     public NavMeshAgent agent;
 
@@ -41,7 +45,7 @@ public class EnemyAi : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        meshRenderer.material = patrollingMaterial;
+        //meshRenderer.material = patrollingMaterial;
     }
 
     private void Update()
@@ -50,15 +54,28 @@ public class EnemyAi : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        if (!playerInSightRange && !playerInAttackRange)
+        {
+            meshRenderer.material = patrollingMaterial;
+            Patroling();
+        }
+        if (playerInSightRange && !playerInAttackRange) 
+        {
+            meshRenderer.material = chaseMaterial;
+            ChasePlayer();
+        }
+        if (playerInAttackRange && playerInSightRange) 
+        {
+            meshRenderer.material = attackMaterial;
+            AttackPlayer();
+        } 
     }
 
     private void Patroling()
     {
+        
         if (!walkPointSet) SearchWalkPoint();
-
+        
         if (walkPointSet)
             agent.SetDestination(walkPoint);
 
@@ -83,11 +100,14 @@ public class EnemyAi : MonoBehaviour
 
     private void ChasePlayer()
     {
+        
         agent.SetDestination(player.position);
+        
     }
 
     private void AttackPlayer()
     {
+        
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
@@ -95,6 +115,7 @@ public class EnemyAi : MonoBehaviour
 
         if (!alreadyAttacked)
         {
+            
             ///Attack code here
             Rigidbody rb = Instantiate(projectile, fireFromPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * attackForce, ForceMode.Impulse);
